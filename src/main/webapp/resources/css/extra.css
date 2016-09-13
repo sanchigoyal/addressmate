@@ -1,0 +1,61 @@
+/* Additional custom css */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/*Displays hand pointer over link */
+.pointerCursor{
+	cursor: pointer;
+}
+
+.img-center{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hideIt{
+	display:none;
+}
+
+.social-icon{
+	color:#333;
+}
+
+.form-group.required .control-label:after { 
+   content:"*";
+   color:red;
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+   color:grey;
+}
+
+.extraPadding20{
+	padding-left:20px;
+}
+.extraPaddingLeftRight5{
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.extraPaddingRight20{
+	padding-right:20px;
+}
+
+.extraPaddingRight10{
+	padding-right:10px;
+}
+
+.extraPaddingTop20{
+	padding-top:20px;
+}
+
+.extraPaddingBottom20{
+	padding-bottom:20px;
+}

@@ -1,0 +1,53 @@
+
+.jumbotron-bg-red {
+background-image: url("../images/banner/banner5.jpg");
+background-size: cover;}
+
+.jumbotron-bg-red  h1 {
+    color: white;
+}
+
+.jumbotron-bg-red  p {
+    color: white;
+}
+
+.jumbotron-bg-red  .form-horizontal p  {
+    font-size: 12px;
+	color: #cfcfcf;
+}
+
+
+
+.jumbotron-bg-dark {
+background-image: url("../images/banner/banner4.jpg");
+background-size: cover;}
+
+.jumbotron-bg-dark  h1 {
+    color: white;
+}
+
+.jumbotron-bg-dark  p {
+    color: white;
+}
+
+.jumbotron-bg-dark .form-group p {
+	font-size: 12px;
+	color: #cfcfcf;
+}
+
+.btn-jumbo{
+	width:100%;
+}
+
+.jumbotron-bg-white{
+	background-image: url("../images/banner/banner1.jpg");
+	background-size: cover;
+}
+
+.jumbotron-bg-white  h1 {
+    color: black;
+}
+
+.jumbotron-bg-white p {
+    color: black;
+}
