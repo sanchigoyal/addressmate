@@ -20,9 +20,9 @@
     
 	<context:component-scan base-package="com.app.addressmate.controller" />
      
-   <!--  <mvc:interceptors>
-	     <bean class="com.app.accountmate.interceptor.LoginInterceptor"></bean>
-	</mvc:interceptors> -->     
+    <mvc:interceptors>
+	     <bean class="com.app.addressmate.interceptor.LoginInterceptor"></bean>
+	</mvc:interceptors>    
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	    <property name="prefix" value="/WEB-INF/views/" />
@@ -50,13 +50,12 @@
 	
 	<!-- <bean id="userDAO" class="com.app.accountmate.dao.UserDAOImpl">
 		<property name="sessionFactory" ref="sessionFactory"/>
-	</bean>
+	</bean> -->
 	
-    <bean id="userServices" class="com.app.accountmate.services.UserServicesImpl">
-    	<property name="userDAO" ref="userDAO"></property>
-    </bean> -->
+    <bean id="userServices" class="com.app.addressmate.services.UserServicesImpl">
+    </bean>
     <bean id="loginController" class="com.app.addressmate.controller.LoginController">
-    	<!-- <property name="userServices" ref="userServices"></property>-->
+    	<property name="services" ref="userServices"></property>
     </bean>
 
 </beans>

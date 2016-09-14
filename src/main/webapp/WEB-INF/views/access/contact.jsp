@@ -42,10 +42,10 @@
 				  </div>
 				  <div class="panel-body">
 				    <address>
-					  <strong>Accountmate, Inc.</strong><br>
-					  Kundanhalli Gate<br>
-					  Bangalore - 37, India<br>
-					  <i class="fa fa-mobile-phone"></i> (+91) 90021-72084
+					  <strong>Addressmate, Inc.</strong><br>
+					  9835 Fredericksburg Rd<br>
+					  San Antonio, Texas<br>
+					  <i class="fa fa-mobile-phone"></i> +1 (210) 371-4160
 					</address>
 
 					<address>

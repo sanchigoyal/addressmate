@@ -34,7 +34,7 @@
 		                    stringLength: {
 		                        min: 3,
 		                        max: 30,
-		                        message: 'The firstname must be more than 3 and less than 30 characters long'
+		                        message: 'The firstname must be more than 3 and less than 30 characters'
 		                    },
 		                    regexp: {
 		                        regexp: /^[a-zA-Z]+$/,
@@ -51,7 +51,7 @@
 		                    stringLength: {
 		                        min: 3,
 		                        max: 30,
-		                        message: 'The lastname must be more than 3 and less than 30 characters long'
+		                        message: 'The lastname must be more than 3 and less than 30 characters'
 		                    },
 		                    regexp: {
 		                        regexp: /^[a-zA-Z]+$/,
@@ -67,13 +67,13 @@
 		                    },
 		                    emailAddress: {
 		                        message: 'The email address is not a valid'
-		                    },
+		                    }/*,
 		                    remote: {
 		                    	message: 'This email address is not available',
 		                        url: '/Accountmate/checkEmailAvailibility',
 		                        type: 'GET',
 		                        delay: 2000     // Send Ajax request every 2 seconds
-		                    }
+		                    }*/
 		                }
 		            },
 		            password: {

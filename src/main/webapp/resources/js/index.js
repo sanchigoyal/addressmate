@@ -16,13 +16,13 @@ $(document).ready(function() {
 										                },
 										                emailAddress: {
 										                    message: 'The email address is not a valid'
-										                },
+										                }/*,
 										                remote: {
 										                	message: 'This email address is not available',
 										                    url: '/Accountmate/checkEmailAvailibility',
 										                    type: 'GET',
 										                    delay: 2000     // Send Ajax request every 2 seconds
-										                }
+										                }*/
 										            }
 										        },
 										        password: {
@@ -39,4 +39,3 @@ $(document).ready(function() {
 										        }
 										    });
 });
-

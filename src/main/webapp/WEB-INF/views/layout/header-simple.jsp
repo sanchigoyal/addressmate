@@ -22,7 +22,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	  </button>
-	  <a class="navbar-brand" href="/Accountmate/index">Accountmate</a>
+	  <a class="navbar-brand" href="/addressmate/">Addressmate</a>
 	</div>
   </div>
 </nav>

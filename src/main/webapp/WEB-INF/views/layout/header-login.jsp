@@ -11,7 +11,7 @@
 <link href="resources/css/formValidation.min.css" rel="stylesheet">
 <link href="resources/css/bootstrap-formhelper-min.css" rel="stylesheet">
 <link href="resources/css/bootstrap-switch.css" rel="stylesheet">
-
+<link href="resources/css/index.css" rel="stylesheet">
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -22,10 +22,10 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	  </button>
-	  <a class="navbar-brand" href="/Accountmate/index">Addressmate</a>
+	  <a class="navbar-brand" href="/addressmate/">Addressmate</a>
 	</div>
 	<div id="navbar" class="navbar-collapse collapse">
-	  <form class="navbar-form navbar-right form-inline" action="/Accountmate/login" method="POST" id="loginForm">
+	  <form class="navbar-form navbar-right form-inline" action="/addressmate/login" method="POST" id="loginForm">
 		<div class="form-group">
 		  <input type="text" placeholder="Email" class="form-control" name="email">
 		</div>

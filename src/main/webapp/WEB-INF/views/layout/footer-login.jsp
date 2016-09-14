@@ -30,8 +30,8 @@
 		</div>
 		<div class="col-md-2 col-md-offset-4">
 			<ul class="list-inline pull-right">
-			  <li><a href="/Accountmate/contact" class="text-right">Contact</a></li>
-			  <li><a href="/Accountmate/aboutUs" class="text-right">About</a></li>
+			  <li><a href="/addressmate/contact" class="text-right">Contact</a></li>
+			  <li><a href="/addressmate/about-us" class="text-right">About</a></li>
 			</ul>
 			
 			
@@ -46,28 +46,5 @@
 <script src="resources/js/bootstrap-formhelper-min.js"></script>
 <script src="resources/js/bootstrap-switch.js"></script>
 <script src="resources/js/bootstrap-wizard.js"></script>
-<script>
-	$(document).ready(function() {
-	    $('#loginForm').formValidation({
-	        framework: 'bootstrap',
-	        icon: {
-	            valid: 'glyphicon glyphicon-ok',
-	            invalid: 'glyphicon glyphicon-remove',
-	            validating: 'glyphicon glyphicon-refresh'
-	        },
-	        fields: {
-	            email: {
-	            	verbose : false,
-	                validators: {
-	                    notEmpty: {
-	                        message: 'The email address is required and cannot be empty'
-	                    },
-	                    emailAddress: {
-	                        message: 'The email address is not a valid'
-	                    }
-	                }
-	            }
-	        }
-	    });
-	});
-</script>
+<script src="resources/js/login.js"></script>
+

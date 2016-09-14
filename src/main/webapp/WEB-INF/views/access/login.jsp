@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<link rel="icon" href="resources/images/logo/favicon.ico">
-    <title>Accountmate</title>
+	<link rel="icon" href="resources/images/logo/addressmate_favicon.ico">
+    <title>Addressmate</title>
   </head>
 
   <body>
@@ -17,20 +17,19 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
-				<img class="img-center" src="resources/images/logo/Logo.JPG" width="100" height="100"/>
-				<h3 class="text-center">Sign in to Accountmate</h3>
-				<br/>
+				<img class="img-center" src="resources/images/logo/addressmate_logo_xhdpi.png"/>
+				<h3 class="text-center">Sign in to Addressmate</h3>
 			</div>
 			<div class="col-md-4 col-md-offset-4">
 				<div class="panel panel-default">
 				  <div class="panel-body">
 				    <div id="failure" class="hideIt">
-			            <div class="alert alert-danger" >
+			            <div class="alert alert-danger text-center" >
 			              <button type="button" class="close" data-dismiss="alert">&times;</button>
 			              <strong>Oh snap!</strong> ${message}
 			            </div>
 			        </div>
-	   				<form id="loginForm" class="form-horizontal" action="/Accountmate/login" method="post">
+	   				<form id="loginForm" class="form-horizontal" action="/addressmate/login" method="post">
 						<div class="col-md-12">
 							<div class="form-group required">
 								<label class="control-label" for="email">Email</label>
@@ -53,7 +52,7 @@
 								<button type="submit" class="btn btn-success btn-jumbo"> Sign In</button>
 							</div>
 							<div class="form-group">
-								<a data-toggle="modal" href="/Accountmate/signup" class="btn btn-primary btn-jumbo">Sign Up</a>
+								<a data-toggle="modal" href="/addressmate/signup" class="btn btn-primary btn-jumbo">Sign Up</a>
 							</div>
 						</div>
 					</form>

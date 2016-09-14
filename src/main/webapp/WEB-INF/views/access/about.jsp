@@ -28,15 +28,29 @@
 			</div>
 			<div class="col-md-12">
 				<h3>What we do?</h3>
-				<p>With a team of experience professionals and a suite of sophisticated electronic platforms,we give our client ways to strategize, track and store their daily business activities. Moreover we also provide a 24/7 support for our client's queries. </p>
+				<p>With a team of experience professionals and a suite of 
+			       sophisticated electronic tools, we provide our clients 
+			       a platform to store and share their addresses. Moreover 
+			       we also provide a 24/7 support for our client's queries. 
+			  	</p>
 			</div>
 			<div class="col-md-12">
 				<h3>How we do?</h3>
-				<p>We bring in IT professionals and Business Analyst from all over India to develop electronic platforms using state of the art technologies to be available on mobile, tablet and PCs.In addition to this we also interact with our clients and include their suggestions as well. </p>
+				<p>We bring in IT professionals and Business Analyst from 
+				   all over India to develop electronic platforms using state
+				   of the art technologies to be available on mobiles, tablets
+				   and PCs. In addition to this we also interact with our 
+				   clients and include their suggestions as well. 
+				</p>
 			</div>
 			<div class="col-md-12">
 				<h3>Why we do?</h3>
-				<p>Helping others has always been our top priority here at Accountmate. Looking at the difficulties faced with other accounting software we thought of coming up with a better solution to make lives of our client better.</p>
+				<p>Helping others has always been our top priority here at
+				   Addressmate. Looking at the difficulties faced with storing
+				   and sharing addresses across multiple vendors, we thought of 
+				   coming up with a better solution to make the lives of our 
+				   client better.
+				</p>
 			</div>
 			
 			<div class="col-md-12">

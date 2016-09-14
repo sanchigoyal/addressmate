@@ -13,7 +13,6 @@
   
 	<!-- Header -->
     <%@include file="../layout/header-login.jsp" %>
-    <link href="resources/css/index.css" rel="stylesheet">
 	<!-- -- --- -->
 	
     <div class="jumbotron jumbotron-bg-red">
@@ -35,7 +34,7 @@
 			</div>
 			<div class="col-md-4 col-md-offset-2">
 				<div id="failure" class="hideIt">
-		            <div class="alert alert-danger" >
+		            <div class="alert alert-danger text-center" >
 		              <button type="button" class="close" data-dismiss="alert">&times;</button>
 		              <strong>Oh snap!</strong> ${message}
 		            </div>
@@ -54,7 +53,7 @@
 					<div class="form-group">
 						<div class="col-md-12">
 							<button type="submit" class="btn btn-success btn-lg btn-jumbo"> Sign up for Addressmate</button>
-							<p class="text-center">By clicking "Sign up for Addressmate", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails</p>
+							<p class="text-center">By clicking "Sign up for Addressmate", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.</p>
 						</div>
 				    </div>
 				</form>
@@ -67,15 +66,29 @@
 	  <div class="row">
 		<div class="col-md-4">
 		  <h2>What we do?</h2>
-		  <p>With a team of experience professionals and a suite of sophisticated electronic tools, we provide our clients a platform to store and share their addresses. Moreover we also provide a 24/7 support for our client's queries. </p>
+		  <p>With a team of experience professionals and a suite of 
+		     sophisticated electronic tools, we provide our clients 
+		     a platform to store and share their addresses. Moreover 
+		     we also provide a 24/7 support for our client's queries. 
+		  </p>
 		</div>
 		<div class="col-md-4">
 		  <h2>How we do?</h2>
-		  <p>We bring in IT professionals and Business Analyst from all over India to develop electronic platforms using state of the art technologies to be available on mobiles, tablets and PCs. In addition to this we also interact with our clients and include their suggestions as well. </p>
+		  <p>We bring in IT professionals and Business Analyst from 
+		     all over India to develop electronic platforms using state
+		     of the art technologies to be available on mobiles, tablets
+		     and PCs. In addition to this we also interact with our 
+		     clients and include their suggestions as well. 
+		  </p>
 	   </div>
 		<div class="col-md-4">
 		  <h2>Why we do?</h2>
-		  <p>Helping others has always been our top priority here at Addressmate. Looking at the difficulties faced with storing and sharing addresses across multiple vendors, we thought of coming up with a better solution to make the lives of our client better.</p>
+		  <p>Helping others has always been our top priority here at
+		  	 Addressmate. Looking at the difficulties faced with storing
+		  	 and sharing addresses across multiple vendors, we thought of 
+		  	 coming up with a better solution to make the lives of our 
+		  	 client better.
+		  </p>
 		</div>
 		<div class="col-md-12">
 			<hr/>
@@ -86,7 +99,7 @@
 		<div class=" col-md-offset-4 col-md-4">
 			<img class="img-circle img-center" src="resources/images/team/sanchi.JPG" width="200" height="200">
 			<h2 class="text-center">Sanchi Goyal<br>
-				<small>Lead Designer & Developer</small></h2>
+				<small>Lead Designer &amp; Developer</small></h2>
 			<ul class="list-inline text-center">
 			  <li>
 			  	<a href="https://twitter.com/" target="_blank" class="social-icon">
@@ -110,6 +123,13 @@
 	<!-- Footer -->
     <%@include file="../layout/footer-login.jsp" %>
     <script src="resources/js/index.js"></script>
-
+    <script>
+    if ("${success}" == "false"){
+    	document.getElementById("failure").style.display = "block";
+    }
+    else{		
+    	document.getElementById("failure").style.display = "none";
+    }
+    </script>
   </body>
 </html>
