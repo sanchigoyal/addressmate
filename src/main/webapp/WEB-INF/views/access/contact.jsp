@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	<link rel="icon" href="resources/images/logo/favicon.ico">
-    <title>Accountmate</title>
+	<link rel="icon" href="resources/images/logo/addressmate_favicon.ico">
+    <title>Addressmate</title>
   </head>
 
   <body>

@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.app.addressmate.util.Crypt;
 import com.app.addressmate.bean.UserProfile;
 import com.app.addressmate.constants.UserConstants;
+import com.app.addressmate.exception.RequestFailureException;
 import com.app.addressmate.services.UserServices;
+import com.app.addressmate.util.security.Crypt;
 
 @Controller
 public class LoginController {
@@ -131,18 +132,29 @@ public class LoginController {
 			 */
 			session.invalidate();
 		}
-
-		if (services.validateUser(user)) {
-			session.setAttribute(UserConstants.ATTR_LOGIN, UserConstants.REQUEST_SUCCESS);
-	    	session.setAttribute(UserConstants.USER_NAME, user.getUserUUID());
-			/*
-			 * Set other attribute here e.g User Settings, email and company info
-			 */
-			return "redirect:/home";
+		
+		try{
+			UserProfile returnedUser = services.getUser(user);
+			
+			if (returnedUser != null) {
+				
+				session.setAttribute(UserConstants.ATTR_LOGIN, UserConstants.REQUEST_SUCCESS);
+		    	session.setAttribute(UserConstants.USER_NAME, returnedUser.getUserUUID());
+				/*
+				 * Set other attribute here e.g User Settings, email and company info
+				 */
+				return "redirect:/home";
+			}
+	
+			session.setAttribute(UserConstants.ATTR_LOGIN, UserConstants.REQUEST_FAILURE);
+			session.setAttribute("message", UserConstants.INVALID_USERNAME_PASSWORD);
+			
+		}catch(RequestFailureException ex){
+			
+			session.setAttribute(UserConstants.ATTR_LOGIN, UserConstants.REQUEST_FAILURE);
+			session.setAttribute("message", UserConstants.REQUEST_PROCESSING_FAILED);
+			LOGGER.error(ex.getMessage(), ex);
 		}
-
-		session.setAttribute(UserConstants.ATTR_LOGIN, UserConstants.REQUEST_FAILURE);
-		session.setAttribute("message", UserConstants.INVALID_USERNAME_PASSWORD);
 		return "redirect:/login-error";
 	}
 	
@@ -182,7 +194,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping("/home")
-	public String getUserHomePage(HttpServletRequest request, ModelMap model) {
+	public String getHomePage(HttpServletRequest request, ModelMap model) {
 		return "access/home";
 	}
 	
