@@ -67,40 +67,28 @@ public class LoginController {
 	public String registerUser(@ModelAttribute("addressmate") UserProfile user, HttpServletRequest request,
 			ModelMap model) {
 		String message = null;
-		String salt = null;
-		String securePassword = null;
 		HttpSession session = request.getSession();
 		
 		try{
-			/*
-			 * Encrypt password and store both encrypted password and its salt in DB.
-			 */
-			salt = Crypt.getSalt();
-			securePassword = Crypt.get_SHA_1_SecurePassword(user.getPassword(), salt); 
-			
-			user.setPassword(securePassword);
-			user.setSalt(salt);
 			
 			/*
 			 * Success - redirect to home
 			 * Failure - redirect to index (handle msg display on index page)
 			 */
-			if(services.addUser(user)){
+			UserProfile returnedUser = services.addUser(user);
+			if(returnedUser != null){
 				/*
 				 * Set all session variables here
 				 */
 				session.setAttribute(UserConstants.ATTR_LOGIN, UserConstants.REQUEST_SUCCESS);
-		    	session.setAttribute(UserConstants.USER_NAME, user.getUserUUID());
+		    	session.setAttribute(UserConstants.USER_NAME, returnedUser.getUserUUID());
 		    	
 				return "redirect:/home";
 			}
 			
 			message = UserConstants.REQUEST_PROCESSING_FAILED;
-			
-		}catch(NoSuchAlgorithmException nsae){
-			message = UserConstants.REQUEST_PROCESSING_FAILED;
-		}
-		catch(Exception e){
+		
+		}catch(RequestFailureException e){
 			LOGGER.error(e.getMessage(), e);;
 			message = UserConstants.REQUEST_PROCESSING_FAILED;
 		}

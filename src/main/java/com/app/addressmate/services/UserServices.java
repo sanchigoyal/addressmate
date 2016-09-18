@@ -5,7 +5,7 @@ import com.app.addressmate.exception.RequestFailureException;
 
 public interface UserServices {
 
-	public boolean addUser(UserProfile user);
+	public UserProfile addUser(UserProfile user);
 
 	public UserProfile getUser(UserProfile user) throws RequestFailureException;
 	
